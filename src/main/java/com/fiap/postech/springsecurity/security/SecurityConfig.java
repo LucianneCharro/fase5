@@ -25,7 +25,11 @@ public class SecurityConfig {
                 .authenticationProvider(daoProvider)
                 .authorizeHttpRequests(authReqConfig -> {
 
+                    authReqConfig.requestMatchers(HttpMethod.POST, "/customers").permitAll();
                     authReqConfig.requestMatchers(HttpMethod.GET, "/products").permitAll();
+                    authReqConfig.requestMatchers(HttpMethod.POST, "/products").permitAll();
+                    authReqConfig.requestMatchers(HttpMethod.GET, "/categories").permitAll();
+                    authReqConfig.requestMatchers(HttpMethod.POST, "/categories").permitAll();
                     authReqConfig.requestMatchers(HttpMethod.POST, "/auth/authenticate").permitAll();
                     authReqConfig.requestMatchers(HttpMethod.GET, "/auth/validate-token").permitAll();
 
