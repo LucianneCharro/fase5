@@ -1,0 +1,1 @@
+docker run --name fiap -e POSTGRES_PASSWORD=102030 -d -p 5432:5432 postgres
