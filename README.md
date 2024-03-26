@@ -27,45 +27,24 @@ Em anexo estão as collections do Insomnia.
 
 - `API de criação usuário`:
 
-Request:
-  {
-  "id":1235,
-  "name": "luis",
-  "username": "ballico7",
-  "password": "10101010",
-  "repetedPassword":"10101010"
-  }
-
-Response:
-  {
-  "id": 3,
-  "username": "ballico7",
-  "name": "ballico7",
-  "role": "ROLE_CUSTOMER",
-  "jwt": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJiYWxsaWNvNyIsImlhdCI6MTcxMTMxNTE4NSwiZXhwIjoxNzExMzE1MzY1LCJyb2xlIjoiUk9MRV9DVVNUT01FUiIsIm5hbWUiOiJiYWxsaWNvNyIsImF1dGhvcml0aWVzIjpbeyJhdXRob3JpdHkiOiJSRUFEX01ZX1BST0ZJTEUifV19.sJGo24ljnIFzSIDpjLkyJdF_DfJq2ERHKl-OIKtSIog"
-  }
-
+Request: <br>
+![image](https://github.com/LucianneCharro/fase5/assets/64719344/5a4d7225-e17b-4b04-b551-8116ca5a4bdd) <br>
+![image](https://github.com/LucianneCharro/fase5/assets/64719344/401e2556-02a1-4883-acfd-8eaec9043add)
+<br><br>
 #### 
 
 - `API de validação Token`:
 
 Response:
-true
+<br>
+![image](https://github.com/LucianneCharro/fase5/assets/64719344/e6d142be-5a80-475c-97ef-c446d794c9f5)
+
 
 #### 
 
-- `API de autenticação de usuário`:
+- `API de autenticação de usuário`: <br>
+![image](https://github.com/LucianneCharro/fase5/assets/64719344/07571138-8a2c-4160-b35b-80ad8cfeb0aa)
 
-Request:
-{
-"username": "ballico7",
-"password": "10101010"
-}
-
-Response:
-{
-"jwt": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJiYWxsaWNvNyIsImlhdCI6MTcxMTMxNTIxMCwiZXhwIjoxNzExMzE1MzkwLCJyb2xlIjoiUk9MRV9DVVNUT01FUiIsIm5hbWUiOiJiYWxsaWNvNyIsImF1dGhvcml0aWVzIjpbeyJhdXRob3JpdHkiOiJSRUFEX01ZX1BST0ZJTEUifV19.20AAMNYSgVx58z_FGhn1WoSD4ZGCGsKTwssQxoYbwW8"
-}
 
 #### 
 
