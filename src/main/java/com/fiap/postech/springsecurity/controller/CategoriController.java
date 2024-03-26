@@ -16,6 +16,7 @@ import java.util.Optional;
 @RestController
 @RequestMapping("/categories")
 public class CategoriController {
+
     @Autowired
     private CategoriService categoriService;
 

@@ -16,6 +16,7 @@ import java.util.Optional;
 @RestController
 @RequestMapping("/products")
 public class ProductController {
+
     @Autowired
     private ProductService productService;
 
@@ -28,7 +29,7 @@ public class ProductController {
         return ResponseEntity.notFound().build();
     }
 
-    @GetMapping("/{product}")
+    @GetMapping("/{productId}")
     public ResponseEntity<Product> findOne(@PathVariable Long productId) {
         Optional<Product> product = productService.findOneId(productId);
 

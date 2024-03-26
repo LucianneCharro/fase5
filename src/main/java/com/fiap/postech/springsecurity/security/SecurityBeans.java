@@ -14,8 +14,10 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 @Configuration
 public class SecurityBeans {
+
     @Autowired
     private UserRepository userRepository;
+
     @Bean
     public AuthenticationManager authenticationManager(AuthenticationConfiguration configuration) throws Exception {
         return configuration.getAuthenticationManager();
@@ -36,7 +38,7 @@ public class SecurityBeans {
     public UserDetailsService userDetailsService(){
         return (username) -> {
             return userRepository.findByUsername(username).
-                    orElseThrow(() -> new ObjectNorFoundExeption("User not Found whith username"+username));
+                    orElseThrow(() -> new ObjectNorFoundExeption("User not Found whith username" + username));
         } ;
     }
 }

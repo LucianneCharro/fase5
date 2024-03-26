@@ -16,6 +16,7 @@ import java.util.Map;
 public class JwtServices {
     @Value("${security.jwt.expiration-in-minute}")
     private Long EXPIRATION_IN_MINUTE;
+
     @Value("${security.jwt.secrete.key}")
     private String SECRET_KEY ;
 
@@ -23,7 +24,7 @@ public class JwtServices {
         Date issuedAt = new Date(System.currentTimeMillis());
         Date expiration = new Date((EXPIRATION_IN_MINUTE * 60 * 100) + issuedAt.getTime());
 
-        String jwt = Jwts.builder()
+        return Jwts.builder()
                 .header()
                     .type("JWT")
                     .and()
@@ -33,11 +34,6 @@ public class JwtServices {
                 .expiration(expiration)
                 .claims(extraClins)
                 .compact();
-
-
-
-
-        return jwt;
     }
 
     private SecretKey generateKey() {

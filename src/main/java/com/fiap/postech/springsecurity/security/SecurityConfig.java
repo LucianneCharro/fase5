@@ -13,13 +13,14 @@ import org.springframework.security.web.SecurityFilterChain;
 @Configuration
 @EnableWebSecurity
 public class SecurityConfig {
+
     @Autowired
     private AuthenticationProvider daoProvider;
 
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
 
-        SecurityFilterChain filterChain = http
+        return http
                 .csrf(csrfConfig -> csrfConfig.disable())
                 .sessionManagement(sessMagConfig -> sessMagConfig.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
                 .authenticationProvider(daoProvider)
@@ -27,16 +28,15 @@ public class SecurityConfig {
 
                     authReqConfig.requestMatchers(HttpMethod.POST, "/customers").permitAll();
                     authReqConfig.requestMatchers(HttpMethod.GET, "/products").permitAll();
+                    authReqConfig.requestMatchers(HttpMethod.GET, "/products/{productId}").permitAll();
+                    authReqConfig.requestMatchers(HttpMethod.PUT, "/products/{productId}").permitAll();
                     authReqConfig.requestMatchers(HttpMethod.POST, "/products").permitAll();
                     authReqConfig.requestMatchers(HttpMethod.GET, "/categories").permitAll();
                     authReqConfig.requestMatchers(HttpMethod.POST, "/categories").permitAll();
                     authReqConfig.requestMatchers(HttpMethod.POST, "/auth/authenticate").permitAll();
                     authReqConfig.requestMatchers(HttpMethod.GET, "/auth/validate-token").permitAll();
-
                     authReqConfig.anyRequest().authenticated();
                 })
                 .build();
-
-        return filterChain;
     }
 }

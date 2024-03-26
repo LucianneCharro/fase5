@@ -8,13 +8,12 @@ import org.springframework.data.domain.Pageable;
 import java.util.Optional;
 
 public interface CategoriService {
+
      Page<Category> findAll(Pageable pageable);
 
      Optional<Category> findOneId(Long categoryId);
 
      Category createOne(SaveCategory saveCategory);
-
-
 
      Category updateOneById(Long categoryId, SaveCategory saveCategory);
 

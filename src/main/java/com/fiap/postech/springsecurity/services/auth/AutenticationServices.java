@@ -18,10 +18,13 @@ import java.util.Map;
 
 @Service
 public class AutenticationServices {
+
     @Autowired
     private UserServices userServices;
+
     @Autowired
     private JwtServices jwtService;
+
     @Autowired
     private AuthenticationManager authenticationManager;
 

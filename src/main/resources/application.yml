@@ -1,13 +1,25 @@
 spring:
+  application:
+    name: hackathon
   datasource:
     url: jdbc:h2:mem:mydb
     username: sa
-    password: password
+    password:
     driverClassName: org.h2.Driver
-  jpa:
-    database: h2
-    database-platform: org.hibernate.dialect.H2Dialect
-    show-sql: true
-    defer-datasource-initialization: true
-    hibernate:
-      ddl-auto: create-drop
+    jpa:
+      defer-datasource-initialization: true
+      spring.jpa.database-platform: org.hibernate.dialect.H2Dialect
+    h2:
+      console.enabled: true
+
+server:
+  port: 9191
+  servlet:
+    context-path: /api/v1
+
+security:
+  jwt:
+    expiration-in-minute: 30
+    secrete:
+      key: SG9sYSBzb3kgbGVvIHJvbWVybyB5IFF1aWVybyBhIHl1bnVlbiBUb3JyZXM==
+
