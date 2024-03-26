@@ -42,131 +42,36 @@ Response:
 
 #### 
 
-- `API de autenticação de usuário`: <br>
+- `API de autenticação de usuário`: <br><br>
 ![image](https://github.com/LucianneCharro/fase5/assets/64719344/07571138-8a2c-4160-b35b-80ad8cfeb0aa)
 
 
 #### 
 
-- `API de criação de categoria`:
+- `API de criação de categoria`: <br><br>
+![image](https://github.com/LucianneCharro/fase5/assets/64719344/370da63c-5481-43ea-9441-82a46fbfa5ac)
 
-Request:
-{
-"name": "lu",
-"status":"ENABLED",
-"categoryId": "ENABLED"
-}
 
-Response:
-{
-"id": 4,
-"name": "lu",
-"status": "ENABLED"
-}
+
+- `API de consulta de categorias`: <br><br>
+![image](https://github.com/LucianneCharro/fase5/assets/64719344/c91195ed-0ea4-408e-b497-08b887059aff)
+
+- `API de consulta de categorias por id`: <br><br>
+![image](https://github.com/LucianneCharro/fase5/assets/64719344/f54ef616-b0d6-4fd7-9d08-b8a736ca6a78)
 
 #### 
 
-- `API de consulta de categoria`:
+- `API de criação de produto`: <br><br>
+![image](https://github.com/LucianneCharro/fase5/assets/64719344/c27b9091-d133-477e-a128-51f89f47b130)
 
-Response:
 
-	"content": [
-		{
-			"id": 1,
-			"name": "Eletronica",
-			"status": "ENABLED"
-		}
-	],
-	"pageable": {
-		"pageNumber": 0,
-		"pageSize": 20,
-		"sort": {
-			"empty": true,
-			"sorted": false,
-			"unsorted": true
-		},
-		"offset": 0,
-		"paged": true,
-		"unpaged": false
-	},
-	"last": true,
-	"totalPages": 1,
-	"totalElements": 4,
-	"size": 20,
-	"number": 0,
-	"sort": {
-		"empty": true,
-		"sorted": false,
-		"unsorted": true
-	},
-	"first": true,
-	"numberOfElements": 4,
-	"empty": false
-}
+- `API de consultar produtos`: <br><br>
+![image](https://github.com/LucianneCharro/fase5/assets/64719344/6cdcc47a-34d1-46d4-bf18-2aa0824a551b)
 
-#### 
 
-- `API de criação de produto`:
+- `API de consultar produtos por id`: <br><br>
+![image](https://github.com/LucianneCharro/fase5/assets/64719344/4e777ccb-e0ad-4849-83b4-01d838bade43)
 
-Request:
-{
-"name": "xx",
-"price": 10.0,
-"categoryId": 1
-}
-
-Response:
-{
-"id": 8,
-"name": "xx",
-"price": 10.0,
-"status": "ENABLED",
-"category": null
-}
-
-#### 
-
-- `API de consulta de produto`:
-
-Response:
-
-{
-"content": [
-
-{
-"id": 8,
-"name": "lu",
-"price": 10.00,
-"status": "ENABLED",
-"category": null
-}
-],
-"pageable": {
-"pageNumber": 0,
-"pageSize": 20,
-"sort": {
-"empty": true,
-"sorted": false,
-"unsorted": true
-},
-"offset": 0,
-"paged": true,
-"unpaged": false
-},
-"last": true,
-"totalPages": 1,
-"totalElements": 8,
-"size": 20,
-"number": 0,
-"sort": {
-"empty": true,
-"sorted": false,
-"unsorted": true
-},
-"first": true,
-"numberOfElements": 8,
-"empty": false
-}
 
 2. #### Rotas de cada API:
 - `API de criação usuário`: http://localhost:9191/api/v1/customers
